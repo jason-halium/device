@@ -547,3 +547,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubports/70-lavender.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubports/scaling.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
+
+# Something is also missing here as well
+PRODUCT_PACKAGES += \
+    libmedia_omx \
+    android.frameworks.displayservice@1.0
+
+PRODUCT_PACKAGES += \
+    libion \
+    libmedia_compat_layer \
+    libui_compat_layer
+
+# HuongfishOS droidmedia
+PRODUCT_PACKAGES += \
+    libdroidmedia \
+    minimediaservice \
+    minisfservice \
+    miniafservice
