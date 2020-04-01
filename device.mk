@@ -556,6 +556,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion \
     libmedia_compat_layer \
+    libsf_compat_layer \
     libui_compat_layer
 
 # HuongfishOS droidmedia
@@ -564,3 +565,8 @@ PRODUCT_PACKAGES += \
     minimediaservice \
     minisfservice \
     miniafservice
+
+# Ubuntu
+PRODUCT_PACKAGES += \
+    libbiometry_fp_api \
+    libubuntu_application_api
