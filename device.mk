@@ -549,6 +549,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubports/scaling.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/rootdir/etc/init.disabled.rc:system/etc/init/init.disabled.rc
 
+# Disable FakeSensorServer so UBports can use it
+MINIMEDIA_SENSORSERVER_DISABLE := 1
+
 # Something is also missing here as well
 PRODUCT_PACKAGES += \
     libmedia_omx \
