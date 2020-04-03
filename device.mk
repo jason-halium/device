@@ -103,14 +103,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# Alipay
-PRODUCT_PACKAGES += \
-    IFAAService \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
-
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -222,7 +214,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.sdm660 \
@@ -240,10 +231,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.fovc.enable=1 \
     persist.vendor.dualcam.lpm.enable=1 \
     persist.vendor.dualcam.defer.enable=1
-
-# ConfigPanel
-PRODUCT_PACKAGES += \
-    ConfigPanel
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -515,14 +502,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.cmc=false \
     ro.vendor.sdk.sensors.gestures=false
 
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
+#Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.force_on_dc=true
 
@@ -553,18 +533,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    hostapd \
-    hostapd_cli \
-    ipacm \
-    IPACM_cfg.xml \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
-    libwifi-hal-qcom \
-    readmac \
-    wificond \
-    wpa_supplicant \
-    wpa_supplicant.conf
+    android.hardware.wifi@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -573,11 +542,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/move_wifi_data.sh:system/bin/move_wifi_data.sh \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libaacwrapper \
-    libnl
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
